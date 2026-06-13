@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>SheStyle – Tienda de Moda</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Barra de Anuncios -->
+  <div class="announcement-bar" id="announcementBar">
+    <span id="announcementText">🔥 ENVÍO GRATIS en compras mayores a $499</span>
+  </div>
+
+  <!-- Navbar -->
+  <header class="navbar">
+    <div class="nav-top">
+      <h1 class="store-name">SheStyle</h1>
+      <div class="bag-wrapper" id="bagWrapper">
+        <svg class="bag-icon" viewBox="0 0 24 24" fill="none" stroke="#111" stroke-width="1.8">
+          <path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/>
+          <line x1="3" y1="6" x2="21" y2="6"/>
+          <path d="M16 10a4 4 0 01-8 0"/>
+        </svg>
+        <span class="bag-count" id="bagCount">0</span>
+      </div>
+    </div>
+    <div class="search-container">
+      <input class="search-input" type="text" placeholder="Buscar en SheStyle..." id="searchInput">
+      <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="#999" stroke-width="2">
+        <circle cx="11" cy="11" r="8"/>
+        <line x1="21" y1="21" x2="16.65" y2="16.65"/>
+      </svg>
+    </div>
+  </header>
+
+  <!-- Filtros rápidos -->
+  <nav class="category-filters" id="categoryFilters">
+    <button class="filter-btn active" data-category="all">Ver Todo</button>
+    <button class="filter-btn" data-category="Tops">Tops</button>
+    <button class="filter-btn" data-category="Jeans">Jeans</button>
+    <button class="filter-btn" data-category="Accesorios">Accesorios</button>
+  </nav>
+
+  <!-- Grid de Productos -->
+  <main class="product-grid" id="productGrid"></main>
+
+  <!-- Sección de Ubicación / Footer -->
+  <footer class="store-location">
+    <div class="location-divider"></div>
+    <h2 class="location-title">Visítanos en nuestro Local</h2>
+    <p class="location-address">Av. Reforma 123, Col. Centro, CDMX</p>
+    <p class="location-hours">Lunes a Sábado de 9:00 AM a 6:00 PM</p>
+    <a class="location-btn" href="#" target="_blank">Ver en Google Maps</a>
+  </footer>
+
+  <!-- Overlay -->
+  <div class="overlay" id="overlay"></div>
+
+  <!-- Modal de Detalles del Producto -->
+  <div class="modal" id="modal">
+    <div class="modal-content">
+      <button class="modal-close" id="modalClose">&times;</button>
+      <img class="modal-image" id="modalImage" src="" alt="">
+      <div class="modal-body">
+        <h2 class="modal-title" id="modalTitle"></h2>
+        <div class="modal-prices" id="modalPrices"></div>
+        <p class="modal-desc" id="modalDesc"></p>
+        <div class="size-selector">
+          <span class="size-label">Talla:</span>
+          <div class="size-options" id="sizeOptions">
+            <button class="size-btn" data-size="S">S</button>
+            <button class="size-btn" data-size="M">M</button>
+            <button class="size-btn" data-size="L">L</button>
+            <button class="size-btn" data-size="XL">XL</button>
+          </div>
+        </div>
+        <button class="modal-add-btn" id="modalAddBtn">Agregar a la bolsa</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Sidebar del Carrito -->
+  <div class="cart-sidebar" id="cartSidebar">
+    <div class="cart-header">
+      <h2 class="cart-title">Tu Bolsa</h2>
+      <button class="cart-close" id="cartClose">&times;</button>
+    </div>
+    <div class="cart-items" id="cartItems"></div>
+    <div class="cart-footer">
+      <div class="cart-total" id="cartTotal">Total: $0</div>
+      <button class="cart-clear-btn" id="cartClearBtn">Vaciar Carrito</button>
+      <button class="whatsapp-btn" id="whatsappBtn">Confirmar Pedido por WhatsApp</button>
+    </div>
+  </div>
+
+  <!-- Toast -->
+  <div class="toast" id="toast"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
