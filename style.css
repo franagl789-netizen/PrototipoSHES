@@ -9,7 +9,7 @@
 
 body {
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-  background: #ffffff;
+  background: #FFF5F6;
   color: #111111;
   max-width: 480px;
   margin: 0 auto;
@@ -23,7 +23,7 @@ body.no-scroll {
 
 /* ===== ANNOUNCEMENT BAR ===== */
 .announcement-bar {
-  background: #111;
+  background: #1A2B4C;
   color: #fff;
   text-align: center;
   font-size: 12px;
@@ -38,7 +38,7 @@ body.no-scroll {
 /* ===== NAVBAR ===== */
 .navbar {
   padding: 12px 16px 8px;
-  background: #fff;
+  background: #FFF5F6;
   position: sticky;
   top: 0;
   z-index: 10;
@@ -48,12 +48,11 @@ body.no-scroll {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 10px;
 }
 
 .store-name {
   font-family: 'Playfair Display', serif;
-  font-size: 26px;
+  font-size: 22px;
   font-weight: 700;
   letter-spacing: -0.5px;
   color: #111;
@@ -91,9 +90,33 @@ body.no-scroll {
   transform: scale(1.3);
 }
 
+/* ===== HERO SECTION ===== */
+.hero {
+  text-align: center;
+  padding: 40px 24px 48px;
+}
+
+.hero-logo {
+  height: 190px;
+  width: auto;
+  margin-bottom: 22px;
+}
+
+.hero-text {
+  font-family: 'Playfair Display', serif;
+  font-size: 17px;
+  color: #666;
+  line-height: 1.6;
+  max-width: 360px;
+  margin: 0 auto;
+  font-weight: 400;
+  font-style: italic;
+}
+
 /* ===== SEARCH BAR ===== */
 .search-container {
   position: relative;
+  padding: 0 16px 4px;
 }
 
 .search-input {
@@ -109,8 +132,8 @@ body.no-scroll {
 }
 
 .search-input:focus {
-  border-color: #111;
-  box-shadow: 0 0 0 2px rgba(17, 17, 17, 0.06);
+  border-color: #C9A96E;
+  box-shadow: 0 0 0 3px rgba(201, 169, 110, 0.15);
   background: #fff;
 }
 
@@ -154,13 +177,13 @@ body.no-scroll {
 }
 
 .filter-btn:hover {
-  border-color: #111;
-  color: #111;
+  border-color: #1A2B4C;
+  color: #1A2B4C;
 }
 
 .filter-btn.active {
-  background: #111;
-  border-color: #111;
+  background: #1A2B4C;
+  border-color: #1A2B4C;
   color: #fff;
 }
 
@@ -179,9 +202,14 @@ body.no-scroll {
   overflow: hidden;
   display: flex;
   flex-direction: column;
-  transition: opacity 0.35s ease, transform 0.35s ease;
+  border: 1px solid rgba(201, 169, 110, 0.2);
+  transition: opacity 0.35s ease, transform 0.35s ease, box-shadow 0.25s ease;
   animation: fadeIn 0.35s ease forwards;
   cursor: pointer;
+}
+
+.product-card:hover {
+  box-shadow: 0 4px 16px rgba(201, 169, 110, 0.15);
 }
 
 .product-card.hide {
@@ -264,7 +292,7 @@ body.no-scroll {
   position: absolute;
   top: 10px;
   left: 10px;
-  background: #e74c3c;
+  background: #C9A96E;
   color: #fff;
   font-size: 11px;
   font-weight: 700;
@@ -316,10 +344,10 @@ body.no-scroll {
   margin-top: 4px;
   width: 100%;
   padding: 8px 0;
-  border: 1.5px solid #111;
+  border: 1.5px solid #1A2B4C;
   border-radius: 20px;
   background: #fff;
-  color: #111;
+  color: #1A2B4C;
   font-size: 12px;
   font-weight: 600;
   font-family: 'Inter', sans-serif;
@@ -331,8 +359,10 @@ body.no-scroll {
 }
 
 .add-btn:hover {
-  background: #111;
+  background: #1A2B4C;
   color: #fff;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(26, 43, 76, 0.2);
 }
 
 .add-btn:active {
@@ -485,13 +515,13 @@ body.no-scroll {
 }
 
 .size-btn:hover {
-  border-color: #111;
-  color: #111;
+  border-color: #1A2B4C;
+  color: #1A2B4C;
 }
 
 .size-btn.active {
-  background: #111;
-  border-color: #111;
+  background: #1A2B4C;
+  border-color: #1A2B4C;
   color: #fff;
 }
 
@@ -501,17 +531,19 @@ body.no-scroll {
   padding: 12px 0;
   border: none;
   border-radius: 24px;
-  background: #111;
+  background: #1A2B4C;
   color: #fff;
   font-size: 15px;
   font-weight: 600;
   font-family: 'Inter', sans-serif;
   cursor: pointer;
-  transition: background 0.25s ease, transform 0.15s ease;
+  transition: all 0.25s ease;
 }
 
 .modal-add-btn:hover {
-  background: #333;
+  background: #1A2B4C;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 15px rgba(26, 43, 76, 0.25);
 }
 
 .modal-add-btn:active {
@@ -699,19 +731,21 @@ body.no-scroll {
   padding: 12px 0;
   border: none;
   border-radius: 24px;
-  background: #111;
+  background: #1A2B4C;
   color: #fff;
   font-size: 14px;
   font-weight: 700;
   font-family: 'Inter', sans-serif;
   cursor: pointer;
-  transition: background 0.25s ease, transform 0.15s ease;
+  transition: all 0.25s ease;
   margin-top: 8px;
   letter-spacing: 0.3px;
 }
 
 .whatsapp-btn:hover {
-  background: #25d366;
+  background: #1A2B4C;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 15px rgba(26, 43, 76, 0.25);
 }
 
 .whatsapp-btn:active {
@@ -722,15 +756,16 @@ body.no-scroll {
 .store-location {
   text-align: center;
   padding: 32px 24px 40px;
-  background: #fafafa;
+  background: #fff;
   margin: 8px 16px 0;
   border-radius: 16px;
+  border: 1px solid rgba(201, 169, 110, 0.2);
 }
 
 .location-divider {
   width: 40px;
   height: 3px;
-  background: #111;
+  background: #C9A96E;
   margin: 0 auto 16px;
   border-radius: 2px;
 }
@@ -759,10 +794,10 @@ body.no-scroll {
 .location-btn {
   display: inline-block;
   padding: 10px 28px;
-  border: 1.5px solid #111;
+  border: 1.5px solid #1A2B4C;
   border-radius: 24px;
   background: #fff;
-  color: #111;
+  color: #1A2B4C;
   font-size: 13px;
   font-weight: 600;
   font-family: 'Inter', sans-serif;
@@ -771,8 +806,10 @@ body.no-scroll {
 }
 
 .location-btn:hover {
-  background: #111;
+  background: #1A2B4C;
   color: #fff;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(26, 43, 76, 0.2);
 }
 
 /* ===== TOAST ===== */
@@ -781,7 +818,7 @@ body.no-scroll {
   bottom: 24px;
   left: 50%;
   transform: translateX(-50%) translateY(80px);
-  background: #111;
+  background: #1A2B4C;
   color: #fff;
   padding: 10px 24px;
   border-radius: 24px;
