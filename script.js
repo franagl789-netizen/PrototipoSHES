@@ -583,7 +583,7 @@ function confirmarPedidoWhatsApp() {
   }
 
   // Encabezado del mensaje
-  let mensaje = '¡Hola! Quiero hacer un pedido en Kellys & Thiago boutique.\n\n';
+  let mensaje = '¡Hola! Quiero hacer un pedido en Variedades Kellys & Thiago.\n\n';
   mensaje += '*Productos:*\n';
 
   // Listar cada producto del carrito
