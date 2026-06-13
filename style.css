@@ -94,12 +94,18 @@ body.no-scroll {
 .hero {
   text-align: center;
   padding: 40px 24px 48px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .hero-logo {
-  height: 190px;
-  width: auto;
-  margin-bottom: 22px;
+  width: 100%;
+  max-width: 180px;
+  height: auto;
+  margin: 0 auto 22px auto;
+  display: block;
 }
 
 .hero-text {
